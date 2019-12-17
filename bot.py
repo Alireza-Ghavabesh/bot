@@ -33,12 +33,12 @@ updater.dispatcher.add_handler(start_command)
 
 
 PORT = int(os.environ.get('PORT', '8443'))
-updater.start_polling()
+# updater.start_polling()
 # add handlers
-# updater.start_webhook(listen="0.0.0.0",
-#                       port=PORT,
-#                       url_path=TOKEN)
-# updater.bot.set_webhook("https://botpythonic.herokuapp.com/" + TOKEN)
+updater.start_webhook(listen="0.0.0.0",
+                      port=PORT,
+                      url_path=TOKEN)
+updater.bot.set_webhook("https://botpythonic.herokuapp.com/" + TOKEN)
 
 
 
