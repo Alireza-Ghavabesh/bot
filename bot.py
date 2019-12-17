@@ -2,7 +2,7 @@ from telegram.ext import Updater
 from telegram.ext import Filters
 from telegram.ext import MessageHandler
 #################
-import os
+# import os
 import json
 import jdatetime
 import time
@@ -32,14 +32,14 @@ updater.dispatcher.add_handler(start_command)
 
 
 
-PORT = int(os.environ.get('PORT', '8443'))
-# updater.start_polling()
+# PORT = int(os.environ.get('PORT', '8443'))
+updater.start_polling()
 # add handlers
-updater.start_webhook(listen="0.0.0.0",
-                      port=PORT,
-                      url_path=TOKEN)
-updater.bot.set_webhook("https://botpythonic.herokuapp.com/" + TOKEN)
-updater.idle()
+# updater.start_webhook(listen="0.0.0.0",
+#                       port=PORT,
+#                       url_path=TOKEN)
+# updater.bot.set_webhook("https://botpythonic.herokuapp.com/" + TOKEN)
+# updater.idle()
 
 
 
